@@ -3,6 +3,8 @@ import json
 # import requests
 
 
+import random
+
 def lambda_handler(event, context):
     """Sample pure Lambda function
 
@@ -38,5 +40,6 @@ def lambda_handler(event, context):
         "body": json.dumps({
             "message": "hello world",
             # "location": ip.text.replace("\n", "")
+            "random_num": random.randint(1,10)
         }),
     }
